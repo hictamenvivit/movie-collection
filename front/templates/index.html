@@ -1,0 +1,39 @@
+{% raw %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Light exercise</title>
+</head>
+<body>
+<script src="https://unpkg.com/vue"></script>
+
+<div id="myApp">
+
+    <a href="#" @click="showName = true">show movie path</a>
+    <p v-if="showName">{{moviePath}}</p>
+
+
+</div>
+
+<img src="picture">
+
+
+
+<script>
+
+app = new Vue({
+    el: "#myApp",
+    data: {
+        moviePath:"{% endraw %}{{movie_path}}{% raw %}",
+        showName: false
+    }
+
+
+})
+
+</script>
+
+</body>
+</html>
+{% endraw %}
